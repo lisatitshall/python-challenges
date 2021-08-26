@@ -18,5 +18,5 @@ def test_func_3():
     assert func_3(5, 7, [35, 36, 42, 70]) == [True, False, False, True]
 
 def test_func_4():
-    assert func_4("Hello world") == "hllld"
+    assert func_4("Hello world") == "hllrld"
     assert func_4("python is cool") == "pthnl"
