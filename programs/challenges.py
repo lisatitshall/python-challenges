@@ -5,7 +5,10 @@
 # - returns the string in all upper case if its' length is even, and all lower case if its' length is odd. Any non-alphabetic characters should not be changed
 # - stretch goal: try to implement this both with and without the .upper()/.lower() methods
 
-def func_1(string):
+def func_1_methods(string):
+    pass
+
+def func_1_no_methods(string):
     pass
 
 # Challenge 2: write a function which:
