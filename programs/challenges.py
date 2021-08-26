@@ -109,3 +109,16 @@ def func_2(string, list):
 
 def func_3(int1, int2, intlist):
     return [(int % int1 == 0 and int % int2 == 0) for int in intlist]
+
+# Challenge 4: write a function which:
+# - takes a string as an argument
+# - returns a new string containing only the letters from the original string which are at an even-numbered position in the alphabet (letting a = 1, b = 2, ...)
+# - the returned string should only contain letter characters. Ignore case
+
+def func_4(string):
+    even_chars = []
+    for char in string.lower():
+        if 97 <= ord(char) <= 122 and ord(char) % 2 == 0:
+            even_chars.append(char)
+    even_string = ''.join(even_chars)
+    return even_string
