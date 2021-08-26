@@ -18,3 +18,10 @@ def func_1_no_methods(string):
 
 def func_2(string, list):
     pass
+
+# Challenge 3: write a function which:
+# - takes two ints and a list of ints as arguments
+# - returns a list of bools where the ith element is True if list[i] has the two given ints as factors and false otherwise
+
+def func_3(int1, int2, intlist):
+    pass
