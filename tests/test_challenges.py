@@ -1,5 +1,5 @@
 import pytest
-from programs.challenges import func_1_methods, func_1_no_methods, func_2, func_3, func_4
+from programs.challenges import func_1_methods, func_1_no_methods, func_2, func_3, func_4, func_5
 
 def test_func_1_methods():
     assert func_1_methods("Hello world") == "hello world"
@@ -20,3 +20,8 @@ def test_func_3():
 def test_func_4():
     assert func_4("Hello world") == "hllrld"
     assert func_4("python is cool") == "pthnl"
+
+def test_func_5():
+    assert func_5([12, 14, 15, 24, 60]) == None
+    with open('factors.csv', 'r') as f:
+        assert f.readline() == '1,2,3,4,6\n'

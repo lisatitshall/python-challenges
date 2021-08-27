@@ -110,3 +110,14 @@ def func_3(int1, int2, intlist):
 
 def func_4(string):
     return ''.join([char for char in string.lower() if 97 <= ord(char) <= 122 and ord(char) % 2 == 0])
+
+# Challenge 5: write a function which:
+# - takes a list of integers as argument
+# - for each int, creates a list of the factors of the number, including 1 but excluding the number itself
+# - converts these lists to strings and writes them out to a csv file called factors.csv, each on a new line
+
+def func_5(list):
+    factorlists = [','.join([str(num) for num in range(1, int) if int % num == 0]) for int in list]
+    outfile = '\n'.join(factorlists)
+    with open('factors.csv', 'w') as f:
+        f.write(outfile)
