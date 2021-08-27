@@ -11,13 +11,6 @@ def func_1_methods(string):
     else:
         return string.lower()
 
-def char_swap(string, dictionary):
-    outstring = ""
-    for char in string:
-            newChar = dictionary.get(char, char)
-            outstring += newChar
-    return outstring
-
 def func_1_no_methods(string):
     upper_case_dict = {
         "A":"a",
@@ -76,9 +69,9 @@ def func_1_no_methods(string):
         "z":"Z"
     }
     if len(string) % 2 == 0:
-        return char_swap(string, lower_case_dict)
+        return ''.join([lower_case_dict.get(char, char) for char in string])
     else:
-        return char_swap(string, upper_case_dict)
+        return ''.join([upper_case_dict.get(char, char) for char in string])
 
 # Challenge 2: write a function which:
 # - takes a word and a list of words as input
