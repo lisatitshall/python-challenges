@@ -115,6 +115,7 @@ def func_4(string):
 # - takes a list of integers as argument
 # - for each int, creates a list of the factors of the number, including 1 but excluding the number itself
 # - converts these lists to strings and writes them out to a csv file called factors.csv, each on a new line
+# - Note: this function should be a void (i.e return nothing)
 
 def func_5(list):
     factorlists = [','.join([str(num) for num in range(1, int) if int % num == 0]) for int in list]
