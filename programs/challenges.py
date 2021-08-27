@@ -116,9 +116,4 @@ def func_3(int1, int2, intlist):
 # - the returned string should only contain letter characters. Ignore case
 
 def func_4(string):
-    even_chars = []
-    for char in string.lower():
-        if 97 <= ord(char) <= 122 and ord(char) % 2 == 0:
-            even_chars.append(char)
-    even_string = ''.join(even_chars)
-    return even_string
+    return ''.join([char for char in string if 97 <= ord(char) <= 122 and ord(char) % 2 == 0])
