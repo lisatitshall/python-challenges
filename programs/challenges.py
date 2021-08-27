@@ -113,7 +113,7 @@ def func_3(int1, int2, intlist):
 # Challenge 4: write a function which:
 # - takes a string as an argument
 # - returns a new string containing only the letters from the original string which are at an even-numbered position in the alphabet (letting a = 1, b = 2, ...)
-# - the returned string should only contain letter characters. Ignore case
+# - the returned string should only contain letter characters. All chars in the returned string should be lower case
 
 def func_4(string):
-    return ''.join([char for char in string if 97 <= ord(char) <= 122 and ord(char) % 2 == 0])
+    return ''.join([char for char in string.lower() if 97 <= ord(char) <= 122 and ord(char) % 2 == 0])
