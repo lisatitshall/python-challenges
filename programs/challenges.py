@@ -6,6 +6,10 @@
 # - stretch goal: try to implement this both with and without the .upper()/.lower() methods
 
 def func_1_methods(string):
+    if(len(string) % 2 == 0):
+        return string.upper()
+    else:
+        return string.lower()
     pass
 
 def func_1_no_methods(string):
