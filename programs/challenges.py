@@ -28,6 +28,14 @@ def func_2(string, list):
 # - returns a list of bools where the ith element is True if list[i] has the two given ints as factors and false otherwise
 
 def func_3(int1, int2, intlist):
+    newlist = []
+    for integer in intlist:
+        if(integer % int1 == 0 and integer % int2 == 0):
+            newlist.append(True)
+        else:
+            newlist.append(False)
+    return newlist
+        
     pass
 
 # Challenge 4: write a function which:
