@@ -13,6 +13,13 @@ def func_1_methods(string):
     pass
 
 def func_1_no_methods(string):
+    changestring = ""
+    if(len(string) % 2 == 0):
+        for letter in string:
+            changestring = changestring + letter.capitalize()
+    else:
+        changestring = string.casefold()
+    return changestring
     pass
 
 # Challenge 2: write a function which:
