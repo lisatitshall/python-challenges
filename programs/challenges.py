@@ -35,15 +35,25 @@ def func_3(int1, int2, intlist):
         else:
             newlist.append(False)
     return newlist
-        
+
     pass
 
 # Challenge 4: write a function which:
 # - takes a string as an argument
-# - returns a new string containing only the letters from the original string which are at an even-numbered position in the alphabet (letting a = 1, b = 2, ...)
-# - the returned string should only contain letter characters. All chars in the returned string should be lower case
+# - returns a new string containing only the letters from the original string which
+#   are at an even-numbered position in the alphabet (letting a = 1, b = 2, ...)
+# - the returned string should only contain letter characters. All chars in the
+#   returned string should be lower case
 
 def func_4(string):
+    lowerstring = string.lower()
+    newstring = ""
+    for letter in lowerstring:
+        if not(letter.isalpha()):
+            newstring = newstring
+        elif(ord(letter) % 2 == 0):
+            newstring = newstring + letter
+    return newstring
     pass
 
 # Challenge 5: write a function which:
@@ -53,4 +63,18 @@ def func_4(string):
 # - note: this function should be a void (i.e return nothing)
 
 def func_5(list):
+    pass 
+
+#the below code works for a single integer
+
+#def func_5(integer):
+ #   factors = []
+  #  for i in range(1,integer):
+   #     if (integer % i == 0):
+    #        factors.append(str(i))
+    #factorstring = "".join(factors)
+    #with open("factors.csv", "w") as file:
+     #   file.write(factorstring)
+                
     pass
+
