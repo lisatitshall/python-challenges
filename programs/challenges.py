@@ -70,18 +70,28 @@ def func_4(string):
 # - note: this function should be a void (i.e return nothing)
 
 def func_5(list):
+    factordict = {}
+    for integer in list:
+        factors = []
+        for i in range(1,int(integer)):
+            if (int(integer) % i == 0):
+                factors.append(str(i))
+        factordict[integer] = ",".join(factors)
+    with open("factors.csv", "w") as file:
+        for key in factordict.keys():
+            file.write(factordict[key] + "\n")
     pass 
 
 #the below code works for a single integer
 
 #def func_5(integer):
- #   factors = []
-  #  for i in range(1,integer):
-   #     if (integer % i == 0):
-    #        factors.append(str(i))
-    #factorstring = "".join(factors)
-    #with open("factors.csv", "w") as file:
-     #   file.write(factorstring)
+#    factors = []
+#    for i in range(1,integer):
+#        if (integer % i == 0):
+#            factors.append(str(i))
+#    factorstring = "".join(factors)
+#    with open("factors.csv", "w") as file:
+#        file.write(factorstring)
                 
-    pass
+#   pass
 
